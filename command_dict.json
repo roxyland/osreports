@@ -1,0 +1,14 @@
+{
+    "os": [
+        { "title": "-- uname -a --", "cmd": "uname -a", "log": "uname-a.log" },
+        { "title": "-- /etc/release --", "cmd": "cat /etc/*release", "log": "etc_release.log" }
+    ],
+    "disk": [
+        { "title": "-- df -k --", "cmd": "df -k | sort", "log": "df-k.log" },
+        { "title": "-- blar --", "cmd": "blar", "log": "blar.log" }
+    ],
+    "network": [
+        { "title": "-- ip a --", "cmd": "ip a", "log": "ip_a.log" },
+        { "title": "-- some wierd command --", "cmd": "netstat -tunapl|awk -F: '{print $2}'|sed 's/172/substituted/g'", "log": "netstat_wierd.log"}
+    ]
+}

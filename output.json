@@ -1,0 +1,109 @@
+{
+    "os": {
+        "-- uname -a --": {
+            "cmd_run": "uname -a",
+            "cmd_log": "/var/tmp/osreports/uname-a.log",
+            "cmd_out": [
+                "Linux goorm 4.15.0-1049-gcp #52-Ubuntu SMP Fri Nov 8 10:30:54 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux\n"
+            ]
+        },
+        "-- /etc/release --": {
+            "cmd_run": "cat /etc/*release",
+            "cmd_log": "/var/tmp/osreports/etc_release.log",
+            "cmd_out": [
+                "DISTRIB_ID=Ubuntu\n",
+                "DISTRIB_RELEASE=18.04\n",
+                "DISTRIB_CODENAME=bionic\n",
+                "DISTRIB_DESCRIPTION=\"Ubuntu 18.04.2 LTS\"\n",
+                "NAME=\"Ubuntu\"\n",
+                "VERSION=\"18.04.2 LTS (Bionic Beaver)\"\n",
+                "ID=ubuntu\n",
+                "ID_LIKE=debian\n",
+                "PRETTY_NAME=\"Ubuntu 18.04.2 LTS\"\n",
+                "VERSION_ID=\"18.04\"\n",
+                "HOME_URL=\"https://www.ubuntu.com/\"\n",
+                "SUPPORT_URL=\"https://help.ubuntu.com/\"\n",
+                "BUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\n",
+                "PRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\n",
+                "VERSION_CODENAME=bionic\n",
+                "UBUNTU_CODENAME=bionic\n"
+            ]
+        }
+    },
+    "disk": {
+        "-- df -k --": {
+            "cmd_run": "df -k | sort",
+            "cmd_log": "/var/tmp/osreports/df-k.log",
+            "cmd_out": [
+                "/dev/nbd91p1    10189112   296712   9351780   4% /workspace\n",
+                "/dev/sda1       71088948 50574128  20498436  72% /goorm\n",
+                "Filesystem     1K-blocks     Used Available Use% Mounted on\n",
+                "none            10189112   296712   9351780   4% /\n",
+                "shm                65536        0     65536   0% /dev/shm\n",
+                "tmpfs              65536        0     65536   0% /dev\n",
+                "tmpfs            3826216        0   3826216   0% /proc/acpi\n",
+                "tmpfs            3826216        0   3826216   0% /proc/scsi\n",
+                "tmpfs            3826216        0   3826216   0% /sys/firmware\n",
+                "tmpfs            3826216        0   3826216   0% /sys/fs/cgroup\n"
+            ]
+        },
+        "-- /proc/partitions --": {
+            "cmd_run": "cat /proc/partitions",
+            "cmd_log": "/var/tmp/osreports/proc_partitions.log",
+            "cmd_out": [
+                "major minor  #blocks  name\n",
+                "\n",
+                "   8        0   73400320 sda\n",
+                "   8        1   73399279 sda1\n",
+                "   8       16   10485760 sdb\n",
+                "  43       32   20971520 nbd1\n",
+                "  43       33   20970496 nbd1p1\n",
+                "  43       64   10485760 nbd2\n",
+                "  43       65   10484736 nbd2p1\n",
+                "  43       96   10485760 nbd3\n",
+                "  43       97   10484736 nbd3p1\n",
+                "  43      128   10485760 nbd4\n",
+                "  43      129   10484736 nbd4p1\n",
+                "  43      160   10485760 nbd5\n",
+                "  43      161   10484736 nbd5p1\n",
+                "  43      192   10485760 nbd6\n",
+                "  43      193   10484736 nbd6p1\n",
+                "  43      224   10485760 nbd7\n",
+                "  43      225   10484736 nbd7p1\n",
+                "  43      256   10485760 nbd8\n",
+                "  43      257   10484736 nbd8p1\n",
+                "  43      288   10485760 nbd9\n",
+                "  43      289   10484736 nbd9p1\n",
+                "  43     1664   10485760 nbd52\n",
+                "  43     1665   10484736 nbd52p1\n",
+                "  43     1824   10485760 nbd57\n",
+                "  43     1825   10484736 nbd57p1\n",
+                "  43     2336   10485760 nbd73\n",
+                "  43     2337   10484736 nbd73p1\n",
+                "  43     2368   10485760 nbd74\n",
+                "  43     2369   10484736 nbd74p1\n",
+                "  43     2816   10485760 nbd88\n",
+                "  43     2817   10484736 nbd88p1\n",
+                "  43     2880   10485760 nbd90\n",
+                "  43     2881   10484736 nbd90p1\n",
+                "  43     2912   10485760 nbd91\n",
+                "  43     2913   10484736 nbd91p1\n",
+                "  43     2944   10485760 nbd92\n",
+                "  43     2945   10484736 nbd92p1\n",
+                "  43     3072   10485760 nbd96\n",
+                "  43     3073   10484736 nbd96p1\n",
+                "  43     3104   10485760 nbd97\n",
+                "  43     3105   10484736 nbd97p1\n",
+                "  43     3136   10485760 nbd98\n",
+                "  43     3137   10484736 nbd98p1\n"
+            ]
+        },
+        "-- blar --": {
+            "cmd_run": "blar",
+            "cmd_log": "/var/tmp/osreports/blar.log",
+            "cmd_out": [
+                "/bin/sh: 1: blar: not found\n"
+            ]
+        }
+    }
+}
